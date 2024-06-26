@@ -1,13 +1,11 @@
 ﻿Overview
 This project consists of a simple compiler that translates a subset of a high-level programming language (e.g., C-like language) into MIPS assembly language. The project is implemented in C++ and includes tokenization, parsing, AST transformation, and MIPS code generation.
 
-
 Components
 Tokenization (tokenize function): Converts a string of code into a vector of tokens.
 Parsing (Parser class): Parses the vector of tokens into an Abstract Syntax Tree (AST).
 Transformation (Transformer class): Transforms the AST into a MIPS-specific AST.
 Code Generation (CodeGenerator class): Generates MIPS assembly code from the MIPS-specific AST.
-
 
 Classes and Functions
 Node: Represents a node in the AST.
@@ -16,7 +14,6 @@ Parser: Parses tokens into an AST.
 Transformer: Transforms the AST into a MIPS-specific AST.
 CodeGenerator: Generates MIPS assembly code from the MIPS-specific AST.
 
-
 Token Types
 TokenType::Keyword: Represents keywords like int, for, if.
 TokenType::Identifier: Represents variable names.
@@ -24,13 +21,11 @@ TokenType::Number: Represents numeric literals.
 TokenType::Operator: Represents operators like +, -, ++, --, =, ==, !=, +=, -=, <=, >=.
 TokenType::Punctuation: Represents punctuation like (, ), {, }, ;.
 
-
 How It Works
 Tokenization: The tokenize function takes a string of code and breaks it into a list of tokens.
 Parsing: The Parser class processes the list of tokens and constructs an AST.
 Transformation: The Transformer class takes the AST and converts it into a MIPS-specific AST.
 Code Generation: The CodeGenerator class takes the MIPS-specific AST and generates MIPS assembly code.
-
 
 Example
 Given the following input code:
@@ -45,7 +40,6 @@ for (i = 0; i <= 3; i++) {
         a = a + 1;
     }
 }
-
 
 The output MIPS assembly code would be:
 li $t0, 3
@@ -72,13 +66,11 @@ addi $t1, $t1, 1
 j LOOP_START
 LOOP_END:
 
-
 Files
 badge.cpp: Contains the implementation for tokenization, parsing, and transformation.
 badge.h: Contains definitions for Node, MIPSNode, Token, TokenType, Parser, Transformer, and CodeGenerator.
 main.cpp: The main entry point for the compiler.
 badge.asm: The generated MIPS assembly code formatted in MARS. 
-
 
 How to Run
 Compile the code:
